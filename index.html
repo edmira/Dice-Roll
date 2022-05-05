@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ed's Dice Game</title>
+</head>
+<body>
+    <button class="btn btn-about">About</button>
+		<section class="about-section">
+			<div class="about hidden">
+				<button class="btn-close-about">&times;</button>
+				<h1>Ed's Game</h1>
+				<h3>What is Ed's Game?</h3>
+				<p>
+					Ed's Game is a simple dice game first described in print by John Scarne in
+					1945. Players take turns to roll a single die as many times as they
+					wish, adding all roll results to a running total, but losing their
+					gained score for the turn if they roll a 1.
+				</p>
+				<h3>Gameplay</h3>
+				<p>
+					Each turn, a player repeatedly rolls a die until either a 1 is rolled
+					or the player decides to "hold": If the player rolls a 1, they score
+					nothing and it becomes the next player's turn. If the player rolls any
+					other number, it is added to their turn total and the player's turn
+					continues. If a player chooses to "hold", their turn total is added to
+					their score, and it becomes the next player's turn. The first player
+					to score 20 or more points wins.
+				</p>
+			</div>
+			<div class="overlay hidden"></div>
+		</section>
+
+		<main>
+			<div class="start-menu">
+				<h1>Ed's Game</h1>
+				<button class="btn btn-start">Start Game</button>
+			</div>
+
+			<div class="game hidden">
+				<div class="player player-1 active">
+					<h1 class="player-header">Player 1</h1>
+					<p class="total-score total-score-1">1</p>
+					<div class="current-score">
+						<h2 class="score-header">Current Score</h2>
+						<p class="score-counter score-counter-1">1</p>
+					</div>
+				</div>
+
+				<div class="dashboard">
+					<img class="dice hidden" src="images/dice-1.png" alt="dice-image" />
+					<button class="btn btn-roll">🎲 Roll Dice 🎲</button>
+					<button class="btn btn-hold">Hold</button>
+					<button class="btn btn-reset"> Reset Game</button>
+				</div>
+
+				<div class="player player-2">
+					<h1 class="player-header">Player 2</h1>
+					<p class="total-score total-score-2">1</p>
+					<div class="current-score">
+						<h2 class="score-header">Current Score</h2>
+						<p class="score-counter score-counter-2">1</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<p class="footer-text">Copyright @Edmira</p>
+		</footer>
+		<script src="main.js"></script>
+</body>
+</html>
